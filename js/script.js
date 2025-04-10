@@ -41,20 +41,23 @@ generatedButton.addEventListener("click", function (event) {
   const nameSurname = nameSurnameInput.value;
   const distance = parseInt(distanceInput.value);
   const rangeAge = rangeAgeSelect.value;
-  yourTicketEl.classList.remove("d-none"); //biglietto appare nel momento del click
 
   console.log("Nome e Cognome:  " + nameSurname);
   console.log("Km da percorrere:  " + distance);
   console.log("Fascia d'età:  " + rangeAge);
 
+  yourTicketEl.classList.remove("d-none"); //biglietto appare nel momento del click
+
   let finalPriceTicket = priceTicket(distance, rangeAge);
   console.log("il prezzo del biglietto è:  " + finalPriceTicket);
 
-  priceEl.innerText = `${finalPriceTicket}`;
+  //collego nome e prezzo da mettere sul biglietto con i dati che ho
+
+  priceEl.innerText = `${finalPriceTicket} euro`;
   passengerNameEl.innerText = `${nameSurname}`;
 });
 
-// Funzione calcolo prezzo biglietto
+// * Funzione: calcolo prezzo biglietto
 
 function priceTicket(distance, age) {
   const priceForKm = 0.21;
