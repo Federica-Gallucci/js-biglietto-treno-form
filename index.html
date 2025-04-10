@@ -39,5 +39,66 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container p-5 bg-warning">
+      <!-- FORM -->
+      <form id="enter-data">
+        <h3>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
+        <div class="bg-light my-3 py-2 px-3">
+          <div class="row">
+            <div class="col-4">
+              <label>Nome e Cognome</label>
+              <input type="text" class="" id="name-surname" />
+            </div>
+            <div class="col-4">
+              <label>Km da percorrere</label>
+              <input type="text" class="" id="distance" />
+            </div>
+            <div class="col-4">
+              <label>Fascia d'età</label>
+              <select
+                class="form-select"
+                id="range-age"
+                aria-label="Default select example"
+              >
+                <option selected>Maggiorenne</option>
+                <option value="1">Minorenne</option>
+                <option value="2">Maggiorenne</option>
+                <option value="3">Over 65</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="button" id="generated-button" class="btn btn-secondary">
+            Genera
+          </button>
+          <button type="button" class="btn btn-secondary">Annulla</button>
+        </div>
+      </form>
+      <div id="your-ticket">
+        <!-- CARD -->
+        <h3>IL TUO BIGLIETTO</h3>
+        <div class="bg-light my-3 py-2 px-3">
+          <h2>Dettaglio passeggeri</h2>
+          <div class="row">
+            <div class="col-3">
+              <div class="card">Nome Passegero</div>
+              <div class="col-2">
+                <div class="card">Offerta</div>
+                <div class="col-2">
+                  <div class="card">carrozza</div>
+                </div>
+                <div class="col-2">
+                  <div class="card">Codice CP</div>
+                </div>
+                <div class="col-2">
+                  <div class="card">Costo Biglietto</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

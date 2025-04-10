@@ -21,3 +21,23 @@
 // * MILESTONE 3:
 // Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
 // Nota: Se non vi sentite particolarmente creativi, questa potrebbe essere un’implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
+
+// # FORM ELEMENT
+
+const nameSurnameInput = document.getElementById("name-surname");
+const distanceInput = document.getElementById("distance");
+const rangeAgeSelect = document.getElementById("range-age");
+const enterDataForm = document.getElementById("enter-data");
+const generatedButton = document.getElementById("generated-button");
+
+// # ascolto invio form
+generatedButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  const nameSurname = nameSurnameInput.value;
+  const distance = parseInt(distanceInput.value);
+  const rangeAge = rangeAgeSelect.value;
+
+  console.log("Nome e Cognome:  " + nameSurname);
+  console.log("Km da percorrere:  " + distance);
+  console.log("Fascia d'età:  " + rangeAge);
+});
