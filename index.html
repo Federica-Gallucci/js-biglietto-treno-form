@@ -61,10 +61,10 @@
                 id="range-age"
                 aria-label="Default select example"
               >
-                <option selected>Maggiorenne</option>
-                <option value="1">Minorenne</option>
-                <option value="2">Maggiorenne</option>
-                <option value="3">Over 65</option>
+                <option selected>maggiorenne</option>
+                <option value="1">minorenne</option>
+                <option value="2">maggiorenne</option>
+                <option value="3">over 65</option>
               </select>
             </div>
           </div>
@@ -75,29 +75,39 @@
           <button type="button" class="btn btn-secondary">Annulla</button>
         </div>
       </form>
-      <div id="your-ticket">
+      <div id="your-ticket" class="d-none">
         <!-- CARD -->
         <h3>IL TUO BIGLIETTO</h3>
         <div class="bg-light my-3 py-2 px-3">
           <h2>Dettaglio passeggeri</h2>
-          <div class="row">
-            <div class="col-3">
-              <div class="card">Nome Passegero</div>
-              <div class="col-2">
-                <div class="card">Offerta</div>
-                <div class="col-2">
-                  <div class="card">carrozza</div>
-                </div>
-                <div class="col-2">
-                  <div class="card">Codice CP</div>
-                </div>
-                <div class="col-2">
-                  <div class="card">Costo Biglietto</div>
-                </div>
+
+           <div class="row row-cols-5">
+            <div class="col">
+              <div class="card">
+                <strong>Nome Passeggero</strong>
+                <p id="passenger-name"></p>
               </div>
+            </div>
+            <div class="col">
+              <div class="card-top"><strong>Offerta</strong></div>
+              <div class="card-bottom"><p>Biglietto standard</p></div>
+            </div>
+            <div class="col">
+              <div class="card-top"><strong>Carrozza</strong></div>
+              <div class="card-bottom"><p>5</p></div>
+            </div>
+            <div class="col">
+              <div class="card-top"><strong>Codice CP</strong></div>
+              <div class="card-bottom"><p>92911</p></div>
+            </div>
+            <div class="col">
+              <div class="card-top"><strong>Costo Biglietto</strong></div>
+              <div class="card-bottom"><p id="price"></p></div>
+
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </body>
