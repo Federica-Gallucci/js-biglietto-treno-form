@@ -40,4 +40,27 @@ generatedButton.addEventListener("click", function (event) {
   console.log("Nome e Cognome:  " + nameSurname);
   console.log("Km da percorrere:  " + distance);
   console.log("Fascia d'età:  " + rangeAge);
+
+  let finalPriceTicket = priceTicket(distance, rangeAge);
+  console.log("il prezzo del biglietto è:  " + finalPriceTicket);
 });
+
+// Funzione calcolo prezzo biglietto
+
+function priceTicket(distance, age) {
+  const priceForKm = 0.21;
+
+  const totalPrice = distance * priceForKm;
+  const scountMinor = totalPrice * 0.8;
+  const scountOver65 = totalPrice * 0.6;
+  let finalPrice = 0;
+
+  if (age === "minorenne") {
+    finalPrice = scountMinor;
+  } else if (age === "over 65") {
+    finalPrice = scountOver65;
+  } else {
+    finalPrice = totalPrice;
+  }
+  return finalPrice;
+}
